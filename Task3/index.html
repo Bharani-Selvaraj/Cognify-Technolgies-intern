@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVENTURE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#"></a>Home</li>
+            <li><a href="#"></a>Tours</li>
+            <li><a href="#"></a>Explore</li>
+            <li><a href="#"></a>About</li>
+            <li class="ctn"><a href="#"></a>Contact</li>
+
+        </ul>
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>Explore The Colorful World</h2>
+            <div class="line"></div>
+            <h1>A Wonderful Gift</h1>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <!-- ---------Events---- -->
+    <section class="events">
+        <div class="title">
+            <h1>Upcoming Events</h1>
+            <div class="line"></div>
+            <div class="row">
+                <div class="col">
+                    <img src="./img/img1.png" alt="image1">
+                    <h4>Everest Camp Trek</h4>
+                    <p>The Everest Base Camp trek is an iconic journey that captivates adventurers!
+                    </p>
+                    <br>
+                    <a href="#" class="ctn">Learn More</a>
+                </div>
+                <div class="col">
+                    <img src="./img/img2.png" alt="image2">
+                    <h4>Walking Holidays</h4>
+                    <p>Experience breathtaking landscapes on walking holidays a best adventurers!
+                    </p>
+                    <br>
+                    <a href="#" class="ctn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="explore-content">
+            <h1>EXPLORE THE WORLD</h1>
+            <div class="line"></div>
+            <p>The world is a vast tapestry of diverse cultures, landscapes, and ecosystems waiting to be explored. From
+                bustling
+                cities to remote wilderness, adventure beckons.</p>
+
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1>UPCOMING TOURS & DESTINATION</h1>
+                <div class="line"></div>
+                <p>Embark on upcoming tours to captivating destinations worldwide. From serene beaches to historic
+                    landmarks, unforgettable
+                    experiences await travelers seeking adventure and cultural immersion.</p>
+
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="./img/img3.png" alt="image3">
+                    <img src="./img/img4.png" alt="image4">
+                    <img src="./img/img5.png" alt="image5">
+                    <img src="./img/img6.png" alt="image6">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p>123 Fifth Avenue, NY 10160, New York,USA | phone: 800-123-456 | Email: contact@hmail.com</p>
+        <p>Copyright @ 2024 Outdoor Adventure</p>
+    </section>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Interaction</title>
+</head>
+
+<body>
+    <h1>Items</h1>
+    <ul id="item-list"></ul>
+    <input type="text" id="new-item" placeholder="Enter new item">
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        async function fetchData() {
+            const response = await fetch('/items');
+            const data = await response.json();
+            const itemList = document.getElementById('item-list');
+            itemList.innerHTML = '';
+            data.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.id}: ${item.name}`;
+                itemList.appendChild(li);
+            });
+        }
+
+        async function addItem() {
+            const newItemInput = document.getElementById('new-item');
+            const newItem = newItemInput.value;
+            const response = await fetch('/items', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: newItem })
+            });
+            if (response.ok) {
+                newItemInput.value = '';
+                fetchData();
+            } else {
+                alert('Failed to add item');
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+
+</html>
